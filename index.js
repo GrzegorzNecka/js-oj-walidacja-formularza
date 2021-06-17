@@ -1,5 +1,6 @@
 // Import stylesheets
 import './style.css';
+import { checkName } from './validationFn';
 
 // Write Javascript code!
 const form = document.getElementById('form');
@@ -8,13 +9,14 @@ const sendForm = e => {
   e.preventDefault();
   const children = e.target.children;
 
-  Array.from(children).forEach(e => {
-    const { id } = e;
+  Array.from(children).forEach(nodeElem => {
+    const { id } = nodeElem;
 
     // console.log(type);
 
     switch (id) {
       case 'name':
+        checkName(nodeElem);
         console.log('name');
         break;
       case 'email':
