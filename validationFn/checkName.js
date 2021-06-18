@@ -1,5 +1,5 @@
 function checkName(nodeElem) {
-  const val = nodeElem.value;
+  const val = nodeElem.value.trim().toLowerCase();
   const regex = /^[a-ząęńółńżź]+$/g;
 
   const conditionOfLength = val.length >= 2;
