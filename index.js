@@ -1,6 +1,11 @@
 // Import stylesheets
 import './style.css';
-import { checkName, checkEmail, checkPass } from './validationFn';
+import {
+  checkName,
+  checkEmail,
+  checkPass,
+  checkPassConf
+} from './validationFn';
 
 // Write Javascript code!
 const form = document.getElementById('form');
@@ -50,6 +55,8 @@ const sendForm = e => {
         );
         break;
       case 'confirm':
+        console.dir(nodeElem);
+        // checkPassConf(nodeElem, nodeElem)
         // console.log(
         //   'confirm',
         //   `
