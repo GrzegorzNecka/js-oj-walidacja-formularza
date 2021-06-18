@@ -16,8 +16,7 @@ const sendForm = e => {
 
     switch (id) {
       case 'name':
-        checkName(nodeElem);
-        console.log('name');
+        console.log('name', checkName(nodeElem));
         break;
       case 'email':
         console.log('email');

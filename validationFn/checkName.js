@@ -1,13 +1,15 @@
 function checkName(nodeElem) {
   const val = nodeElem.value;
-  const regex = /[a-ząęńółńżź]/gm;
-  if (val.length <= 2) {
-    console.log('za mało znaków');
+  const regex = /^[a-ząęńółńżź]+$/g;
+
+  const conditionOfLength = val.length >= 2;
+  const conditionOfString = regex.test(val);
+
+  if (conditionOfLength && conditionOfString) {
+    return true;
   }
 
-  console.log(regex.test(val));
-
-  console.dir(val.length);
+  return 'pole name musi mieć co najmniej dwa znaki oraz nie może zawierać cyfr i znaków specjalnych ';
 }
 
 export default checkName;
