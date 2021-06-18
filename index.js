@@ -4,7 +4,8 @@ import {
   checkName,
   checkEmail,
   checkPass,
-  checkPassConf
+  checkPassConf,
+  checkRodo
 } from './validationFn';
 
 // Write Javascript code!
@@ -68,6 +69,7 @@ const sendForm = e => {
         // );
         break;
       case 'rodo':
+        checkRodo(nodeElem);
         // console.log('rodo');
         break;
 
