@@ -55,7 +55,10 @@ const sendForm = e => {
         );
         break;
       case 'confirm':
-        console.dir(nodeElem);
+        const passwordElem = document.getElementById('password');
+
+        checkPassConf(nodeElem, passwordElem);
+
         // checkPassConf(nodeElem, nodeElem)
         // console.log(
         //   'confirm',
