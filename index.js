@@ -1,6 +1,6 @@
 // Import stylesheets
 import './style.css';
-import { checkName } from './validationFn';
+import { checkName, checkEmail } from './validationFn';
 
 // Write Javascript code!
 const form = document.getElementById('form');
@@ -17,18 +17,47 @@ const sendForm = e => {
     switch (id) {
       case 'name':
         console.log('name', checkName(nodeElem));
+
+        // if (!checkName(nodeElem)) {
+        //   console.log(
+        //     'pole name musi mieć co najmniej dwa znaki oraz nie może zawierać cyfr i znaków specjalnych '
+        //   );
+        // }
+
         break;
       case 'email':
-        console.log('email');
+        console.log(
+          'email',
+
+          checkEmail(nodeElem),
+          `
+            - musi zawierać małpę “@” 
+            - musi zawierać domenę 
+          `
+        );
+
         break;
       case 'password':
-        console.log('password');
+        // console.log(
+        //   'password',
+        //   `
+        //     - musi mieć co najmniej 8 znaków
+        //     - musi zawierać jeden znak pisany z dużej litery
+        //     - musi zawierać co najmniej jedną liczbę
+        //     - musi zawierać co najmniej jeden znak specjalny
+        //   `
+        // );
         break;
       case 'confirm':
-        console.log('confirm');
+        // console.log(
+        //   'confirm',
+        //   `
+        //     - musi zawierać taką samą zawartość co password
+        //  `
+        // );
         break;
       case 'rodo':
-        console.log('rodo');
+        // console.log('rodo');
         break;
 
       default:

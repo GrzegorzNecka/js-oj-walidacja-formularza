@@ -1,3 +1,6 @@
 import checkName from './checkName';
+import checkEmail from './checkEmail';
+import checkPass from './checkPass';
+import checkPassConf from './checkPassConf';
 
-export { checkName };
+export { checkName, checkEmail, checkPass, checkPassConf };

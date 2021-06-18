@@ -9,7 +9,7 @@ function checkName(nodeElem) {
     return true;
   }
 
-  return 'pole name musi mieć co najmniej dwa znaki oraz nie może zawierać cyfr i znaków specjalnych ';
+  return false;
 }
 
 export default checkName;
