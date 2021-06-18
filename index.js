@@ -49,7 +49,7 @@ const sendForm = e => {
         break;
       case 'confirm':
         const passwordElem = document.getElementById('password');
-        const validConf = checkPass(nodeElem, passwordElem);
+        const validConf = checkPassConf(nodeElem, passwordElem);
         validElem(validConf, 'confirm');
         inputs.push(validConf);
         break;
