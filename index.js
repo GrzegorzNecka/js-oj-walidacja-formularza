@@ -1,6 +1,6 @@
 // Import stylesheets
 import './style.css';
-import { checkName, checkEmail } from './validationFn';
+import { checkName, checkEmail, checkPass } from './validationFn';
 
 // Write Javascript code!
 const form = document.getElementById('form');
@@ -38,15 +38,16 @@ const sendForm = e => {
 
         break;
       case 'password':
-        // console.log(
-        //   'password',
-        //   `
-        //     - musi mieć co najmniej 8 znaków
-        //     - musi zawierać jeden znak pisany z dużej litery
-        //     - musi zawierać co najmniej jedną liczbę
-        //     - musi zawierać co najmniej jeden znak specjalny
-        //   `
-        // );
+        console.log(
+          checkPass(nodeElem),
+          'password',
+          `
+            - musi mieć co najmniej 8 znaków
+            - musi zawierać jeden znak pisany z dużej litery
+            - musi zawierać co najmniej jedną liczbę
+            - musi zawierać co najmniej jeden znak specjalny
+          `
+        );
         break;
       case 'confirm':
         // console.log(
