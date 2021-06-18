@@ -33,25 +33,30 @@ const sendForm = e => {
 
     switch (id) {
       case 'name':
-        validElem(checkName(nodeElem), 'name');
-        inputs.push(checkName(nodeElem));
+        const validName = checkName(nodeElem);
+        validElem(validName, 'name');
+        inputs.push(validName);
         break;
       case 'email':
-        validElem(checkEmail(nodeElem), 'email');
-        inputs.push(checkEmail(nodeElem));
+        const validEmail = checkEmail(nodeElem);
+        validElem(validEmail, 'email');
+        inputs.push(validEmail);
         break;
       case 'password':
-        validElem(checkPass(nodeElem), 'password');
-        inputs.push(checkPass(nodeElem));
+        const validPass = checkPass(nodeElem);
+        validElem(validPass, 'password');
+        inputs.push(validPass);
         break;
       case 'confirm':
         const passwordElem = document.getElementById('password');
-        validElem(checkPassConf(nodeElem, passwordElem), 'confirm');
-        inputs.push(checkPassConf(nodeElem, passwordElem));
+        const validConf = checkPass(nodeElem, passwordElem);
+        validElem(validConf, 'confirm');
+        inputs.push(validConf);
         break;
       case 'rodo':
-        validElem(checkRodo(nodeElem), 'rodo');
-        inputs.push(checkRodo(nodeElem));
+        const validRodo = checkRodo(nodeElem);
+        validElem(validRodo, 'rodo');
+        inputs.push(validRodo);
         break;
 
       default:
