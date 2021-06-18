@@ -10,15 +10,17 @@ import {
   validElem
 } from './validationFn';
 
-
 // Write Javascript code!
 const form = document.getElementById('form');
 const errorOutput = document.getElementById('error-msg');
 
 const sendForm = e => {
   e.preventDefault();
+
   const children = e.target.children;
+
   resetValidElem();
+
   Array.from(children).forEach(nodeElem => {
     const { id } = nodeElem;
 
