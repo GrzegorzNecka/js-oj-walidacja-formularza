@@ -8,33 +8,13 @@ import {
   resetValidElem
 } from './validationFn';
 import { setFormState, stateForm, resetStateForm } from './setFormState';
-
+import fetchData from './fetchData';
 const form = document.getElementById('form');
 const errorOutput = document.getElementById('error-msg');
 
-// --------- fetch ----------
-
-const fetchData = inputVal => {
-  const url = 'https://przeprogramowani.pl/projekt-walidacja';
-  const options = {
-    method: 'POST',
-    body: JSON.stringify(inputVal),
-    headers: {
-      'Content-Type': 'application/json'
-    }
-  };
-
-  fetch(url, options)
-    .then(res => res.json())
-    .then(res => {
-      console.log(res);
-      errorOutput.innerText = 'sukces';
-    });
-};
-
 // --------- event method ----------
 
-const sendForm = e => {
+const submitForm = e => {
   e.preventDefault();
 
   const children = e.target.children;
@@ -69,8 +49,8 @@ const sendForm = e => {
   const { inputState, inputVal } = stateForm;
   const checkedInputs = inputState.filter(input => input);
   if (inputState.length === checkedInputs.length) {
-    fetchData(inputVal);
+    fetchData(inputVal, errorOutput);
   }
 };
 
-form.addEventListener('submit', sendForm);
+form.addEventListener('submit', submitForm);
