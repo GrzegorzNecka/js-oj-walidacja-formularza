@@ -11,8 +11,7 @@ const fetchData = (inputVal, errorOutput) => {
   fetch(url, options)
     .then(res => res.json())
     .then(res => {
-      console.log(res);
-      errorOutput.innerText = 'sukces';
+      errorOutput.innerText = `sukces - formularz z danymi ${res} został wysłany`;
     })
     .catch(() => {
       errorOutput.innerText = 'problemy z połączeniem';

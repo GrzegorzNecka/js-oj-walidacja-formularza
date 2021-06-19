@@ -5,8 +5,6 @@ function checkName(nodeElem) {
   const conditionOfLength = val.length >= 2;
   const conditionOfString = regex.test(val);
 
-  console.log(conditionOfString);
-
   if (conditionOfLength && conditionOfString) {
     return true;
   }
