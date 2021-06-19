@@ -13,6 +13,9 @@ const fetchData = (inputVal, errorOutput) => {
     .then(res => {
       console.log(res);
       errorOutput.innerText = 'sukces';
+    })
+    .catch(() => {
+      errorOutput.innerText = 'problemy z połączeniem';
     });
 };
 
