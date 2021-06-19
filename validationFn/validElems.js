@@ -1,4 +1,4 @@
-import errorMsg from './../errorMsg';
+import errorMsg from './errorMsg';
 
 const errorOutput = document.getElementById('error-msg');
 
