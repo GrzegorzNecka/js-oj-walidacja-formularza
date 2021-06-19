@@ -17,11 +17,11 @@ const errorOutput = document.getElementById('error-msg');
 const submitForm = e => {
   e.preventDefault();
 
-  const children = e.target.children;
+  const inputs = e.target.children;
   resetValidElem();
   resetStateForm();
 
-  Array.from(children).forEach(nodeElem => {
+  Array.from(inputs).forEach(nodeElem => {
     const { id } = nodeElem;
 
     switch (id) {
