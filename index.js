@@ -46,11 +46,12 @@ const sendForm = e => {
 
   const { inputState, inputVal } = stateForm;
 
-  console.log(inputVal);
-
   const checkedInputs = inputState.filter(input => input);
 
   if (inputState.length === checkedInputs.length) {
+    const url = 'https://przeprogramowani.pl/projekt-walidacja';
+    fetch(url, {});
+
     errorOutput.innerText = 'sukces';
   }
 };
