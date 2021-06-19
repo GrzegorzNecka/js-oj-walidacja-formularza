@@ -2,19 +2,23 @@ import { validElem } from './validationFn';
 
 const state = {
   inputState: [],
-  inputVal: []
+  inputVal: {}
 };
 
 function resetStateForm() {
   state.inputState = [];
-  state.inputVal = [];
+  state.inputVal = {};
 }
 
 function setFormState(validInput, nodeElem, name) {
   validElem(validInput, name);
 
+  console.log(name);
+  console.log(nodeElem);
+
   state.inputState.push(validInput);
-  state.inputVal.push(nodeElem.value);
+
+  state.inputVal[name] = nodeElem.value;
 }
 
 export { setFormState, resetStateForm, state as stateForm };
