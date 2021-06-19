@@ -1,5 +1,6 @@
 const fetchData = (inputVal, errorOutput) => {
   const url = 'https://przeprogramowani.pl/projekt-walidacja';
+  
   const options = {
     method: 'POST',
     body: JSON.stringify(inputVal),
