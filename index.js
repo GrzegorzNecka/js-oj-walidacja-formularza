@@ -12,6 +12,25 @@ import { setFormState, stateForm, resetStateForm } from './setFormState';
 const form = document.getElementById('form');
 const errorOutput = document.getElementById('error-msg');
 
+// --------- fetch ----------
+
+const fetchData = inputVal => {
+  const url = 'https://przeprogramowani.pl/projekt-walidacja';
+  const options = {
+    method: 'POST',
+    body: JSON.stringify(inputVal),
+    headers: {
+      'Content-Type': 'application/json'
+    }
+  };
+
+  fetch(url, options)
+    .then(res => res.json())
+    .then(res => console.log(res));
+};
+
+// --------- event method ----------
+
 const sendForm = e => {
   e.preventDefault();
 
@@ -49,9 +68,7 @@ const sendForm = e => {
   const checkedInputs = inputState.filter(input => input);
 
   if (inputState.length === checkedInputs.length) {
-    const url = 'https://przeprogramowani.pl/projekt-walidacja';
-    fetch(url, {});
-
+    fetchData(inputVal);
     errorOutput.innerText = 'sukces';
   }
 };
