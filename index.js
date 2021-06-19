@@ -1,4 +1,3 @@
-// Import stylesheets
 import './style.css';
 import {
   checkName,
@@ -10,7 +9,6 @@ import {
 } from './validationFn';
 import { setFormState, stateForm, resetStateForm } from './setFormState';
 
-// Write Javascript code!
 const form = document.getElementById('form');
 const errorOutput = document.getElementById('error-msg');
 
