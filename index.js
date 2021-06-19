@@ -26,7 +26,10 @@ const fetchData = inputVal => {
 
   fetch(url, options)
     .then(res => res.json())
-    .then(res => console.log(res));
+    .then(res => {
+      console.log(res);
+      errorOutput.innerText = 'sukces';
+    });
 };
 
 // --------- event method ----------
@@ -64,12 +67,9 @@ const sendForm = e => {
   });
 
   const { inputState, inputVal } = stateForm;
-  console.log(inputVal);
   const checkedInputs = inputState.filter(input => input);
-
   if (inputState.length === checkedInputs.length) {
     fetchData(inputVal);
-    errorOutput.innerText = 'sukces';
   }
 };
 

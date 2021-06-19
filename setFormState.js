@@ -13,11 +13,7 @@ function resetStateForm() {
 function setFormState(validInput, nodeElem, name) {
   validElem(validInput, name);
 
-  console.log(name);
-  console.log(nodeElem);
-
   state.inputState.push(validInput);
-
   state.inputVal[name] = nodeElem.value;
 }
 

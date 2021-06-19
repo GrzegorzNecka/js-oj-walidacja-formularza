@@ -5,7 +5,7 @@ function checkEmail(nodeElem) {
   const conditionOfString = regex.test(val);
 
   if (conditionOfLength && conditionOfString) {
-    console.log('###############', conditionOfString);
+
     return true;
   }
 
